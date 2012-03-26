@@ -2,7 +2,7 @@ Feature: search for movies by director
 
   As a movie buff
   So that I can find movies with my favorite director
-  I want to include and serach on director information in movies I enter
+  I want to include and search on director information in movies I enter
 
 Background: movies in database
 
@@ -13,6 +13,7 @@ Background: movies in database
   | Alien        | R      |              |   1979-05-25 |
   | THX-1138     | R      | George Lucas |   1971-03-11 |
 
+ 
 Scenario: add director to existing movie
   When I go to the edit page for "Alien"
   And  I fill in "Director" with "Ridley Scott"
