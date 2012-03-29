@@ -58,4 +58,10 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def similar
+    @movies = Movie.search_by_same_director( params[ :title ])
+    if(@movies == nil)
+       redirect_to movies_path
+    end
+  end
 end

@@ -10,3 +10,4 @@ Then /the (.*) of "(.*)" should be "(.*)"/ do |filed, title, contant|
   @movie.attributes[filed] == contant
 
 end
+
