@@ -27,5 +27,10 @@ describe MoviesController , :type => :controller do
       end
     end
     
+    it 'should show no director message when a searching movie has no director info' do
+      Movie.stub(:search_by_same_director).and_return('')
+      get :similar, {:title => 'Alien'}
+      response.should render_template(:partial => '\'Alien\' has no director info') 
+    end    
   end
 end

@@ -1,8 +1,9 @@
 FactoryGirl.define do
   
   factory :movie do
-    title 'Star Wars'
-    director 'George Lucas'
+    title 'fake title'
+    director 'fake director'
   end
   
+
 end
