@@ -7,7 +7,6 @@ class Movie < ActiveRecord::Base
    
     @movie = self.where(:title => title).first
     if(@movie.nil? == false && @movie.director.blank? == false)
-      puts  @movie.director
       self.where(:director => @movie.director)
     else
       return nil
